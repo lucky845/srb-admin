@@ -8,13 +8,14 @@ import locale from 'element-ui/lib/locale/lang/zh-CN' // lang i18n
 
 import '@/styles/index.scss' // global css
 
-import App from './App'
-import store from './store'
-import router from './router'
+import App from './App' // 根组件
+import store from './store' // 前端信息存储工具
+import router from './router' // 路由模块
 
-import '@/icons' // icon
-import '@/permission' // permission control
+import '@/icons' // icon // 扩展图标系统
+import '@/permission' // permission control // 角色权限控制系统
 
+// 关于模拟接口服务器的设置
 /**
  * If you don't want to use mock-server
  * you want to use MockJs for mock api
@@ -37,7 +38,7 @@ Vue.config.productionTip = false
 
 new Vue({
   el: '#app',
-  router,
+  router, // 挂载路由
   store,
-  render: h => h(App)
+  render: h => h(App) // 渲染引擎,渲染组件
 })
