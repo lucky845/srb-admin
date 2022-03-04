@@ -55,6 +55,7 @@ export const constantRoutes = [
     }]
   },
 
+  // 积分等级管理route
   {
     path: '/core/integral-grade',
     component: Layout, // 布局组件,定义路由出口
@@ -83,6 +84,24 @@ export const constantRoutes = [
         component: () => import('@/views/core/integral-grade/form.vue'),
         meta: { title: '编辑积分等级' },
         hidden: true // 隐藏
+      }
+    ]
+  },
+
+  // 数据字典route
+  {
+    path: '/core',
+    component: Layout,
+    redirect: '/core/dict/list',
+    name: 'coreDict',
+    meta: { title: '系统设置', icon: 'el-icon-setting' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'dict/list',
+        name: '数据字典',
+        component: () => import('@/views/core/dict/list'),
+        meta: { title: '数据字典' }
       }
     ]
   },
