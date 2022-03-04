@@ -10,6 +10,15 @@
       >
         导入Excel
       </el-button>
+      <!-- Excel导出按钮 -->
+      <el-button
+        @click="exportData = true"
+        type="primary"
+        size="mini"
+        icon="el-icon-upload2"
+      >
+        导出Excel
+      </el-button>
     </div>
     <!-- dialog对话框 -->
     <el-dialog title="数据字典导入" :visible.sync="dialogVisible" width="30%">
@@ -66,6 +75,11 @@ export default {
     // 文件上传失败的回调: 通信失败
     fileUploadError() {
       this.$message.error('数据导入失败')
+    },
+    // 导出Excel按钮
+    exportData() {
+      // 导出Excel并下载
+      window.location.href = this.BASE_API + '/admin/core/dict/export'
     }
   }
 }
