@@ -3,19 +3,19 @@
     <!-- 导入按钮 -->
     <div style="margin-bottom: 10px">
       <el-button
-        @click="dialogVisible = true"
+        icon="el-icon-download"
         type="primary"
         size="mini"
-        icon="el-icon-download"
+        @click="dialogVisible = true"
       >
         导入Excel
       </el-button>
       <!-- Excel导出按钮 -->
       <el-button
-        @click="exportData = true"
-        type="primary"
         size="mini"
+        type="primary"
         icon="el-icon-upload2"
+        @click="exportData"
       >
         导出Excel
       </el-button>
