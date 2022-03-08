@@ -88,6 +88,24 @@ export const constantRoutes = [
     ]
   },
 
+  // 会员管理
+  {
+    path: '/core/user-info',
+    component: Layout,
+    redirect: '/core/user-info/list',
+    name: 'coreUserInfo',
+    meta: { title: '会员管理', icon: 'user' },
+    alwaysShow: true,
+    children: [
+      {
+        path: 'list',
+        name: 'coreUserInfoList',
+        component: () => import('@/views/core/user-info/list'),
+        meta: { title: '会员列表' }
+      }
+    ]
+  },
+
   // 数据字典route
   {
     path: '/core',
@@ -102,28 +120,6 @@ export const constantRoutes = [
         name: '数据字典',
         component: () => import('@/views/core/dict/list'),
         meta: { title: '数据字典' }
-      }
-    ]
-  },
-
-  {
-    path: '/example',
-    component: Layout,
-    redirect: '/example/table',
-    name: 'Example',
-    meta: { title: 'Example', icon: 'el-icon-s-help' },
-    children: [
-      {
-        path: 'table',
-        name: 'Table',
-        component: () => import('@/views/table/index'),
-        meta: { title: 'Table', icon: 'table' }
-      },
-      {
-        path: 'tree',
-        name: 'Tree',
-        component: () => import('@/views/tree/index'),
-        meta: { title: 'Tree', icon: 'tree' }
       }
     ]
   },
