@@ -202,8 +202,8 @@ export default {
         infoIntegral: 30, // 借款人积分信息
         isIdCardOk: false, // 是否上传身份信息
         isHouseOk: false, // 是否上传房产信息
-        isCarOk: false, // 是否上传车辆信息
-      },
+        isCarOk: false // 是否上传车辆信息
+      }
     }
   },
   created() {
