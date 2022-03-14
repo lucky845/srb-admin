@@ -14,5 +14,12 @@ export default {
       url: `/admin/core/lend/show/${id}`,
       method: 'get'
     })
+  },
+  // 借款放款
+  makeLoan(id) {
+    return request({
+      url: `/admin/core/makeLoan/${id}`,
+      method: 'get'
+    })
   }
 }
