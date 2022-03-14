@@ -18,7 +18,7 @@ export default {
   // 借款放款
   makeLoan(id) {
     return request({
-      url: `/admin/core/makeLoan/${id}`,
+      url: `/admin/core/lend/makeLoan/${id}`,
       method: 'get'
     })
   }
